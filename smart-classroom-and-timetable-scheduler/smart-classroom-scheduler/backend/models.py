@@ -1,9 +1,8 @@
-from .db import Base
 from __future__ import annotations
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy import String, Integer, Boolean, ForeignKey, UniqueConstraint
 from typing import List, Optional
-from .db import Base
+from db import Base  # Changed from .db import Base to db import Base
 
 class Teacher(Base):
     __tablename__ = "teachers"
