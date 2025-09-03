@@ -1,11 +1,11 @@
 from __future__ import annotations
 from sqlalchemy.orm import Session
-from .db import engine, Base
-from .models import Teacher, Subject, TeacherSubject, ClassGroup, Room, TimeSlot, SubjectRequirement
+from db import engine, Base  # Changed from .db import
+from models import Teacher, Subject, TeacherSubject, ClassGroup, Room, TimeSlot, SubjectRequirement  # Changed from .models import
 
 def run():
     Base.metadata.create_all(bind=engine)
-    from .db import SessionLocal
+    from db import SessionLocal  # Changed from .db import
     db: Session = SessionLocal()
 
     # Only seed if empty
