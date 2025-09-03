@@ -5,7 +5,8 @@ from sqlalchemy.orm import Session
 from collections import defaultdict
 import random
 
-from .models import (
+# Changed from .models import to models import
+from models import (
     Teacher, Subject, TeacherSubject, ClassGroup, Room, TimeSlot,
     SubjectRequirement, Assignment
 )
