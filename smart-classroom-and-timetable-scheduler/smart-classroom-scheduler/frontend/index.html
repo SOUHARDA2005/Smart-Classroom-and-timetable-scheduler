@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smart Classroom & Timetable Scheduler</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+   
+  <div class="bg"></div>
+  <header>
+    <h1>Smart Classroom</h1>
+    <div class="badge">Timetable Scheduler</div>
+  </header>
+
+  <main>
+    <aside class="panel">
+      <h2>Controls</h2>
+      <button id="btn-generate">⚡ Generate Schedule</button>
+      <button id="btn-clear">🧹 Clear Schedule</button>
+      <div class="divider"></div>
+
+      <h3>Choose Class</h3>
+      <select id="class-select"></select>
+
+      <div class="legend" id="legend"></div>
+
+      <div class="hint">
+        Tip: Click any cell to override with your own Subject/Teacher/Room.
+      </div>
+    </aside>
+
+    <section class="panel wide">
+      <h2 id="grid-title">Weekly Grid</h2>
+      <div id="grid" class="grid"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Roster</h2>
+      <div class="roster">
+        <div>
+          <h3>Teachers</h3>
+          <ul id="teacher-list"></ul>
+        </div>
+        <div>
+          <h3>Subjects</h3>
+          <ul id="subject-list"></ul>
+        </div>
+        <div>
+          <h3>Rooms</h3>
+          <ul id="room-list"></ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="override-dialog">
+    <form method="dialog" id="override-form">
+      <h3>Override Slot</h3>
+      <p id="slot-label"></p>
+      <label>Subject
+        <select id="ov-subject"></select>
+      </label>
+      <label>Teacher
+        <select id="ov-teacher"></select>
+      </label>
+      <label>Room
+        <select id="ov-room"></select>
+      </label>
+      <menu>
+        <button value="cancel">Cancel</button>
+        <button id="ov-save" value="default">Save</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <footer>
+    Built with ❤️ for your institute — clean, glassy UI + conflict-free scheduling.
+  </footer>
+   <script src="./app.js"></script>
+
+
+</body>
+</html>
